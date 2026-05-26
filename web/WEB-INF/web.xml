@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet>
+        <servlet-name>send</servlet-name>
+        <jsp-file>/pages/senddata.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>receive</servlet-name>
+        <jsp-file>/pages/receivedata.jsp</jsp-file>
+        <init-param>
+            <param-name>college</param-name>
+            <param-value>Integral University</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>demo</servlet-name>
+        <jsp-file>/WEB-INF/demo.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>CountryModel</servlet-name>
+        <servlet-class>mypkg.CountryModel</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>country</servlet-name>
+        <jsp-file>/jstl/countrydisplay.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>send</servlet-name>
+        <url-pattern>/sdata</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>receive</servlet-name>
+        <url-pattern>/rdata</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>demo</servlet-name>
+        <url-pattern>/demo</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>teacher</param-name>
+        <param-value>Usman Khan</param-value>
+    </context-param>
+    <servlet-mapping>
+        <servlet-name>CountryModel</servlet-name>
+        <url-pattern>/countrymodel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>country</servlet-name>
+        <url-pattern>/countrydisplay</url-pattern>
+    </servlet-mapping>
+</web-app>
