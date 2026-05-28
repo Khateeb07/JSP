@@ -3,26 +3,40 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package mypkg;
+
 import java.sql.*;
 import java.io.*;
+import java.util.Properties;
+
 /**
  *
  * @author zed
  */
 public class DAO {
-    Connection con=null;
+
+    Connection con = null;
+
     public Connection toConnect(String driver) throws ClassNotFoundException, SQLException, IOException {
-        String url="jdbc:mysql://localhost:3306/mydb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
-        String username="skywalker";
-        String password="darthslayer";
-        Class.forName(driver);
-        con=DriverManager.getConnection(url, username, password);
+        Properties props = new Properties();
+        try {
+            props.load(new FileInputStream("src/mypkg/db.properties"));
+            String url = props.getProperty("db.url");
+            String username = props.getProperty("db.username");
+            String password = props.getProperty("db.password");
+            Class.forName(driver);
+            con = DriverManager.getConnection(url, username, password);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return con;
     }
+
     public void toClose() throws SQLException {
-        if(con!=null)
+        if (con != null) {
             con.close();
+        }
     }
+
     public ResultSet toFetch(PreparedStatement pstm) throws SQLException {
         return pstm.executeQuery();
     }
