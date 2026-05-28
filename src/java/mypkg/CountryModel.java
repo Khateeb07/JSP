@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author zed
+ * @author khateeb
  */
 public class CountryModel extends HttpServlet {
 

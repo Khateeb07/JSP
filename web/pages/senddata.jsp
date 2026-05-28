@@ -1,7 +1,7 @@
 <%-- 
     Document   : senddata
     Created on : Oct 9, 2025, 11:07:20 AM
-    Author     : zed
+    Author     : khateeb
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

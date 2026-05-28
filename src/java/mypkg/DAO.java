@@ -10,7 +10,7 @@ import java.util.Properties;
 
 /**
  *
- * @author zed
+ * @author khateeb
  */
 public class DAO {
 

@@ -1,7 +1,7 @@
 <%-- 
     Document   : welcome
     Created on : Oct 3, 2025, 10:36:33 AM
-    Author     : zed
+    Author     : khateeb
 --%>
 
 <%@page info="This is the Welcome JSP Page" language="java" import="java.util.ArrayList, java.util.HashMap"%>

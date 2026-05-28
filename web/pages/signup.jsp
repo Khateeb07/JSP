@@ -1,7 +1,7 @@
 <%-- 
     Document   : SignUp
     Created on : Oct 7, 2025, 10:28:37 AM
-    Author     : zed
+    Author     : khateeb
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

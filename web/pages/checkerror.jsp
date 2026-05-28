@@ -1,7 +1,7 @@
 <%-- 
     Document   : checkError
     Created on : Oct 8, 2025, 11:16:41 AM
-    Author     : zed
+    Author     : khateeb
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" errorPage="iserror.jsp"%>
