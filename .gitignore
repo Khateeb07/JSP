@@ -3,3 +3,4 @@ dist/
 nbproject/private/
 *.class
 *.war
+src/java/mypkg/db.properties
