@@ -19,7 +19,7 @@ public class DAO {
     public Connection toConnect() throws ClassNotFoundException, SQLException, IOException {
         Properties props = new Properties();
         try {
-            props.load(new FileInputStream("src/mypkg/db.properties"));
+            props.load(DAO.class.getResourceAsStream("db.properties"));
             String url = props.getProperty("db.url");
             String username = props.getProperty("db.username");
             String password = props.getProperty("db.password");
