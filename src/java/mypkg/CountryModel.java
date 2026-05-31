@@ -34,12 +34,10 @@ public class CountryModel extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
-            String driver="com.mysql.cj.jdbc.Driver";
             DAO mydao=new DAO();
             HashMap<Integer, String> hm=new HashMap<>();
             try {
-                Connection con=mydao.toConnect(driver);
+                Connection con=mydao.toConnect();
                 PreparedStatement pstm=con.prepareStatement("SELECT * FROM country_new;");
                 ResultSet rs=mydao.toFetch(pstm);
                 while(rs.next()) {
